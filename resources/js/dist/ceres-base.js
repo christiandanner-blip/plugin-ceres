@@ -63652,6 +63652,14 @@ function CeresMain() {
       $("#searchBox").collapse("hide");
       $("#currencySelect").collapse("hide");
     });
+    $(".ddown").on("keydown", function (event) {
+      if (event.key === "Space" || event.keyCode === 32) {
+        event.preventDefault();
+        var li = this.closest("li");
+        var isOpen = li.classList.toggle("hover");
+        this.setAttribute("aria-expanded", isOpen);
+      }
+    });
     fixPopperZIndexes(); // Emit event for Sticky Containers to update
 
     $(".collapse").on("show.bs.collapse hide.bs.collapse", function () {
@@ -67534,7 +67542,9 @@ var actions = {
         sendFile(event, recaptchaResponse).then(function (response) {
           resetRecaptcha(recaptchaEl);
           Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_20__["executeReCaptcha"])(event.target).then(function (recaptchaToken2) {
-            ApiService.post("/rest/io/customer/contact/mail", {
+            var formType = event.target.dataset.formType;
+            var endpoint = formType === "contract-withdrawal" ? "/rest/io/cancellation" : "/rest/io/customer/contact/mail";
+            ApiService.post(endpoint, {
               data: formData,
               recipient: formOptions.recipient,
               subject: formOptions.subject || "",
@@ -67554,7 +67564,13 @@ var actions = {
             }).fail(function (response) {
               resetRecaptcha(recaptchaEl);
               disableForm(event.target, false);
-              _services_NotificationService__WEBPACK_IMPORTED_MODULE_16__["default"].error(_services_TranslationService__WEBPACK_IMPORTED_MODULE_17__["default"].translate("Ceres::Template.contactSendFail"));
+              var errorMsgKey = "Ceres::Template.contactSendFail";
+
+              if (event.target.dataset.formType === "contract-withdrawal") {
+                errorMsgKey = "Ceres::Template.contactSubmissionFail";
+              }
+
+              _services_NotificationService__WEBPACK_IMPORTED_MODULE_16__["default"].error(_services_TranslationService__WEBPACK_IMPORTED_MODULE_17__["default"].translate(errorMsgKey));
             });
           });
         }, function (response) {
