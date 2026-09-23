@@ -1,8 +1,49 @@
 # Release Notes für plentyShop LTS
 
+## v5.0.84 (2026-09-08) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.83...5.0.84" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### TODO
+
+- Aufgrund von Änderungen an bestehenden Widgets müssen die ShopBuilder-Inhalte im Menü **Shop » ShopBuilder** über die Schaltfläche **Inhalte neu generieren** aktualisiert werden.
+
+### Behoben
+
+- Die Terminologie im Bezug auf Durchführungsverordnung (EU) 2025/1960 wurden korrigiert.
+
+## v5.0.83 (2026-09-01) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.81...5.0.83" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### TODO
+
+- Aufgrund von Änderungen an bestehenden Widgets müssen die ShopBuilder-Inhalte im Menü **Shop » ShopBuilder** über die Schaltfläche **Inhalte neu generieren** aktualisiert werden.
+
+### Hinzugefügt
+
+- Ein neues Widget **Garantiehinweis** wurde hinzugefügt. Es zeigt die Harmonised Notice on the Legal Guarantee of Conformity an und kann im Checkout platziert werden.
+- Ein neues Widget **Garantiekennzeichnung** wurde hinzugefügt. Es zeigt das Harmonised Label for Commercial Guarantees of Durability ("GARAN"-Label) an und kann auf der Artikelseite und im Warenkorb platziert werden.
+- Die Option **Kontakt sichtbar machen** wurde dem Widget **Widerrufsformular** hinzugefügt. Dadurch kann der Link zur Kontaktseite unabhängig von anderen rechtlichen Verlinkungen ausgeblendet werden.
+
+### Behoben
+
+- Teilweise wurden bei Bildern die Einstellung für Lazy Loading nicht respektiert. Dieses Problem wurde behoben.
+- Die CDN-URLs wurden von `.plentymarkets` auf `.plentyone` geändert, um Weiterleitungen zu vermeiden.
+
+## v5.0.81 (2026-06-18) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.80...5.0.81" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
+
+### Hinzugefügt
+
+- Die Standardvorlage des Widerrufsformulars wurde um eine Verlinkung zu der Datenschutzerklärung des Shops erweitert.
+
+### Behoben
+
+- Beim Absenden eines Widerrufsformulars ist keine Einwilligung für Google reCAPTCHA mehr notwendig.
+
+### TODO
+
+- Aufgrund von Änderungen an bestehenden Widgets müssen die ShopBuilder-Inhalte im Menü **Shop » ShopBuilder** über die Schaltfläche **Inhalte neu generieren** aktualisiert werden.
+
 ## v5.0.80 (2026-05-27) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.79...5.0.80" target="_blank" rel="noopener"><b>Übersicht aller Änderungen</b></a>
 
-### Fixed
+### Behoben
 
 - Ein Problem im Zusammenhang mit der Drosselung bei Varianten.
 

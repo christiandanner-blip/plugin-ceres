@@ -1,5 +1,46 @@
 # Release Notes for plentyShop LTS
 
+## v5.0.84 (2026-09-08) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.83...5.0.84" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### TODO
+
+- Due to changes to existing widgets, ShopBuilder content must be updated in the **Shop » ShopBuilder** menu using the **Regenerate Content** button.
+
+### Fixed
+
+- Terminology concerning Regulation (EU) 2025/1960 has been fixed.
+
+## v5.0.83 (2026-09-01) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.81...5.0.83" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### TODO
+
+- Due to changes to existing widgets, ShopBuilder content must be updated in the **Shop » ShopBuilder** menu using the **Regenerate Content** button.
+
+### Added
+
+- The **Guarantee notice** widget has been added. It displays the Harmonised Notice on the Legal Guarantee of Conformity and can be added on the checkout page.
+- The **EU guarantee label** widget has been added. It displays the Harmonised Label for Commercial Guarantees of Durability ("GARAN"-Label) and can be added on the single item page and on the basket.
+- The **Show contact** option has been added to the **Cancellation form** widget. This lets you show or hide the link to the contact page independent of other legal links.
+
+### Fixed
+
+- In some cases, the lazy loading settings for images were not respected. This has been resolved.
+- CDN URLs have been updated from `.plentymarkets` to `.plentyone` to avoid redirects.
+
+## v5.0.81 (2026-06-18) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.80...5.0.81" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
+
+### Added
+
+- A link to the shop's privacy policy has been added to the default template of the cancellation form.
+
+### Fixed
+
+- Submitting a cancellation form no longer requires consenting to Google reCAPTCHA.
+
+### TODO
+
+- Due to changes to existing widgets, ShopBuilder content must be updated in the **Shop » ShopBuilder** menu using the **Regenerate Content** button.
+
 ## v5.0.80 (2026-05-27) <a href="https://github.com/plentymarkets/plugin-ceres/compare/5.0.79...5.0.80" target="_blank" rel="noopener"><b>Overview of all changes</b></a>
 
 ### Fixed
